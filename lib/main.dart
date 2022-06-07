@@ -22,6 +22,11 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
+      theme: ThemeData(
+          primaryColor: Colors.black,
+          accentColor: Colors.orange,
+          hintColor: Colors.grey,
+      ),
       supportedLocales: I10n.delegate.supportedLocales,
       locale: const Locale(AppStrings.en),
       fallbackLocale: const Locale(AppStrings.en),

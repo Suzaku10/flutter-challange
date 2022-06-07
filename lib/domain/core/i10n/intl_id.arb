@@ -1,10 +1,13 @@
 {
-  "login" : "Masuk",
-  "login_info" : "Silakan masuk untuk melanjutkan",
-  "user_id" : "ID Pengguna",
-  "user_id_hint" : "ID Pengguna",
-  "password" : "Kata Sandi",
-  "password_hint" : "Kata Sandi",
-  "non_member_info" : "Tidak memiliki akun?",
-  "sign_up" : "Daftar"
+  "login": "Masuk",
+  "login_info": "Silakan masuk untuk melanjutkan",
+  "user_id": "ID Pengguna",
+  "user_id_hint": "ID Pengguna",
+  "password": "Kata Sandi",
+  "password_hint": "Kata Sandi",
+  "non_member_info": "Tidak memiliki akun?",
+  "sign_up": "Daftar",
+  "dialog_login_failed": "User ID dan atau Password anda belum diisi.",
+  "cancel": "Batalkan",
+  "ok": "ok"
 }

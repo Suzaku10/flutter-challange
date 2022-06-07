@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_challange/domain/core/const_assets.dart';
 import 'package:flutter_challange/domain/core/router.dart';
 import 'package:get/get.dart';
 
@@ -25,13 +26,16 @@ class _SplashPageState extends State<SplashPage> {
       child: SafeArea(
         child: Scaffold(
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(height: 100, width: double.infinity, color: Colors.blue,),
-              Container(height: 100, width: double.infinity, color: Colors.green,),
-              Container(height: 100, width: double.infinity, color: Colors.red,),
+              Image.asset(AppAssets.headerSplash),
+              Expanded(
+                child: Center(
+                  child: Image.asset(AppAssets.logo),
+                ),
+              ),
+              Image.asset(AppAssets.footerSplash),
             ],
-          )
+          ),
         ),
       ),
     );

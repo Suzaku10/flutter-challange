@@ -129,6 +129,36 @@ class I10n {
       args: [],
     );
   }
+
+  /// `User ID or Your Password isn't filled.`
+  String get dialog_login_failed {
+    return Intl.message(
+      'User ID or Your Password isn\'t filled.',
+      name: 'dialog_login_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message(
+      'Cancel',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ok`
+  String get ok {
+    return Intl.message(
+      'ok',
+      name: 'ok',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<I10n> {

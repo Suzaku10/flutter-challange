@@ -22,11 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cancel": MessageLookupByLibrary.simpleMessage("Batalkan"),
+        "dialog_login_failed": MessageLookupByLibrary.simpleMessage(
+            "User ID dan atau Password anda belum diisi."),
         "login": MessageLookupByLibrary.simpleMessage("Masuk"),
         "login_info": MessageLookupByLibrary.simpleMessage(
             "Silakan masuk untuk melanjutkan"),
         "non_member_info":
             MessageLookupByLibrary.simpleMessage("Tidak memiliki akun?"),
+        "ok": MessageLookupByLibrary.simpleMessage("ok"),
         "password": MessageLookupByLibrary.simpleMessage("Kata Sandi"),
         "password_hint": MessageLookupByLibrary.simpleMessage("Kata Sandi"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Daftar"),
