@@ -11,6 +11,11 @@ class AppDialog {
     final result = await Get.dialog(const BasicDialog()) ?? false;
     return result;
   }
+
+  static Future<bool> info() async {
+    final result = await Get.dialog(const BasicDialogInfo()) ?? false;
+    return result;
+  }
 }
 
 class BasicDialog extends StatelessWidget {
@@ -35,6 +40,44 @@ class BasicDialog extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: Text(
                   I10n.current.dialog_login_failed,
+                  style: AppStyle.bold14,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              AppButton.normal(
+                I10n.current.ok.toUpperCase(),
+                onPressed: () => Get.back(result: true),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class BasicDialogInfo extends StatelessWidget {
+  const BasicDialogInfo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: Center(
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.symmetric(horizontal: 32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(
+                  I10n.current.dialog_login_success,
                   style: AppStyle.bold14,
                   textAlign: TextAlign.center,
                 ),

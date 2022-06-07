@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Batalkan"),
         "dialog_login_failed": MessageLookupByLibrary.simpleMessage(
             "User ID dan atau Password anda belum diisi."),
+        "dialog_login_success":
+            MessageLookupByLibrary.simpleMessage("Login berhasil"),
         "feature_coming_soon": MessageLookupByLibrary.simpleMessage(
             "Oops, fitur ini akan rilis segera"),
         "login": MessageLookupByLibrary.simpleMessage("Masuk"),

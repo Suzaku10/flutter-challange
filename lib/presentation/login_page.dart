@@ -85,13 +85,18 @@ class _LoginPageState extends State<LoginPage> {
                       I10n.current.login.toUpperCase(),
                       onPressed: () {
                         FocusScope.of(context).unfocus();
-                        AppDialog.confirmDialog().then(
-                          (value) {
-                            if (value) {
-                              _clearAllController();
-                            }
-                          },
-                        );
+                        final success = _validation();
+                        if (!success) {
+                          AppDialog.confirmDialog();
+                        } else {
+                          AppDialog.info().then(
+                            (value) {
+                              if (value) {
+                                _clearAllController();
+                              }
+                            },
+                          );
+                        }
                       },
                     )
                   ],
@@ -138,5 +143,14 @@ class _LoginPageState extends State<LoginPage> {
   void _clearAllController() {
     _userIDController.clear();
     _passwordController.clear();
+  }
+
+  bool _validation() {
+    if (_userIDController.text.isNotEmpty &&
+        _passwordController.text.isNotEmpty) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

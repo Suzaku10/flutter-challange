@@ -8,6 +8,7 @@
   "non_member_info": "Tidak memiliki akun?",
   "sign_up": "Daftar",
   "dialog_login_failed": "User ID dan atau Password anda belum diisi.",
+  "dialog_login_success": "Login berhasil",
   "cancel": "Batalkan",
   "ok": "ok",
   "feature_coming_soon": "Oops, fitur ini akan rilis segera"

@@ -8,6 +8,7 @@
   "non_member_info": "Don't have an account?",
   "sign_up": "Sign Up",
   "dialog_login_failed": "User ID or Your Password isn't filled.",
+  "dialog_login_success": "Login Successful",
   "cancel" : "Cancel",
   "ok": "ok",
   "feature_coming_soon": "Oops, this feature will release soon"

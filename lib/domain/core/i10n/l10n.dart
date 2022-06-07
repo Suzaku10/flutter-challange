@@ -140,6 +140,16 @@ class I10n {
     );
   }
 
+  /// `Login Successful`
+  String get dialog_login_success {
+    return Intl.message(
+      'Login Successful',
+      name: 'dialog_login_success',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Cancel`
   String get cancel {
     return Intl.message(
