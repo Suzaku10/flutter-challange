@@ -1,0 +1,10 @@
+{
+  "login" : "Login",
+  "login_info" : "Please sign in to continue",
+  "user_id" : "User ID",
+  "user_id_hint" : "User ID",
+  "password" : "Password",
+  "password_hint" : "Password",
+  "non_member_info" : "Don't have an account?",
+  "sign_up" : "Sign Up"
+}
