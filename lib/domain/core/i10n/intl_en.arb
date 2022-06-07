@@ -9,5 +9,6 @@
   "sign_up": "Sign Up",
   "dialog_login_failed": "User ID or Your Password isn't filled.",
   "cancel" : "Cancel",
-  "ok": "ok"
+  "ok": "ok",
+  "feature_coming_soon": "Oops, this feature will release soon"
 }

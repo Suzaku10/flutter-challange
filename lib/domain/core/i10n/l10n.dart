@@ -159,6 +159,16 @@ class I10n {
       args: [],
     );
   }
+
+  /// `Oops, this feature will release soon`
+  String get feature_coming_soon {
+    return Intl.message(
+      'Oops, this feature will release soon',
+      name: 'feature_coming_soon',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<I10n> {

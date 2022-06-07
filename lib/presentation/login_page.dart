@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_challange/domain/core/const_assets.dart';
 import 'package:flutter_challange/domain/core/const_style.dart';
@@ -73,6 +74,10 @@ class _LoginPageState extends State<LoginPage> {
                           controller: _passwordController,
                           hint: I10n.current.password_hint,
                           obscureText: !showPassword,
+                          isPassword: true,
+                          showPassCallback: (value) {
+                            setState(() => showPassword = !value);
+                          },
                         ),
                       ],
                     ),
@@ -102,8 +107,14 @@ class _LoginPageState extends State<LoginPage> {
                       TextSpan(text: I10n.current.non_member_info),
                       const TextSpan(text: " "),
                       TextSpan(
-                          text: I10n.current.sign_up,
-                          style: AppStyle.bold12red),
+                        text: I10n.current.sign_up,
+                        style: AppStyle.bold12red,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap =
+                              () => ScaffoldMessenger.of(context).showSnackBar(
+                                    _snackBar(),
+                                  ),
+                      ),
                     ],
                     style: AppStyle.normal12.copyWith(
                       color: Colors.black,
@@ -115,6 +126,12 @@ class _LoginPageState extends State<LoginPage> {
           ],
         ),
       ),
+    );
+  }
+
+  SnackBar _snackBar() {
+    return SnackBar(
+      content: Text(I10n.current.feature_coming_soon),
     );
   }
 

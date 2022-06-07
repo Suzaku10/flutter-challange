@@ -9,6 +9,8 @@ class AppTextField {
     required TextEditingController controller,
     String? hint,
     bool? obscureText,
+    bool isPassword = false,
+    Function(bool)? showPassCallback,
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
@@ -24,14 +26,24 @@ class AppTextField {
               hintText: hint,
               hintStyle: AppStyle.italic10,
               enabledBorder: const UnderlineInputBorder(
-                borderSide:  BorderSide(color: Colors.grey),
+                borderSide: BorderSide(color: Colors.grey),
               ),
               focusedBorder: const UnderlineInputBorder(
-                borderSide:  BorderSide(color: Colors.black),
+                borderSide: BorderSide(color: Colors.black),
               ),
               border: const UnderlineInputBorder(
-                borderSide:  BorderSide(color: Colors.grey),
+                borderSide: BorderSide(color: Colors.grey),
               ),
+              suffixIcon: isPassword
+                  ? InkWell(
+                      child: const Icon(Icons.remove_red_eye),
+                      onTap: () {
+                        if (showPassCallback != null) {
+                          showPassCallback(!(obscureText!));
+                        }
+                      },
+                    )
+                  : null,
             ),
             obscureText: obscureText ?? false,
             controller: controller,
